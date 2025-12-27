@@ -1,0 +1,242 @@
+#selectedProducts {
+    padding: 2rem;
+    background-color: var(--light-bg);
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+#selectedProducts h3 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    position: relative;
+}
+
+#selectedProducts h3::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: var(--accent-color);
+}
+
+#selectedProducts table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    overflow: hidden;
+    overflow-x: auto; /* Agregado para permitir desplazamiento horizontal */
+}
+
+#selectedProducts th, #selectedProducts td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--light-bg);
+}
+
+#selectedProducts th {
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-weight: bold;
+}
+
+#selectedProducts tr:last-child td {
+    border-bottom: none;
+}
+
+#selectedProducts tr:hover {
+    background-color: var(--light-bg);
+    transition: var(--transition);
+}
+
+.total-cost {
+    max-width: 250px;
+    margin: 20px auto; /* Centrado horizontal */
+    padding: 10px 15px;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centrado del texto */
+    font-weight: bold; /* Resaltar texto */
+    color: #333; /* Color de texto */
+}
+.total-cost span {
+    color: #007bff; /* Resaltar el monto en azul */
+    font-size: 1.2em; /* Aumentar tamaño del monto */
+}
+
+/* Botón de Pagar */
+.btn-pay {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    color: #fff; /* Letras blancas */
+    background-color: #007bff; /* Azul */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-pay:hover {
+    background-color: #0056b3; /* Azul más oscuro al pasar el mouse */
+    transform: scale(1.05);
+}
+#selectedProducts tr:hover {
+    background-color: var(--light-bg); /* Color suave al hacer hover */
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1); /* Resalta de manera más suave */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Asegúrate de que la transición sea suave */
+}
+
+/* Botón común para agregar al carrito y pagar */
+.btn-info, .btn-pay {
+    background-color: #119dd5; /* Verde, puedes cambiarlo según tus necesidades */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-info:hover, .btn-pay:hover {
+    background-color: #45a049; /* Color de hover */
+}
+
+/* Estilo para el campo de cantidad */
+input[type="number"] {
+    padding: 8px;
+    font-size: 16px;
+    width: 60px; /* Tamaño de ancho para el campo */
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin: 10px 0;
+}
+
+/* Cambiar el estilo del campo cuando esté en foco */
+input[type="number"]:focus {
+    border-color: #4CAF50; /* Color de borde al hacer foco */
+    outline: none;
+}
+
+#addToAccountSection {
+    display: flex;
+    align-items: center; /* Centra los elementos verticalmente */
+    justify-content: flex-start; /* Alinea los elementos a la izquierda */
+}
+
+#addToAccountSection form {
+    margin-right: 10px; /* Espacio entre el botón de añadir a cuenta y el buscador */
+}
+
+#addToAccountSection input {
+    width: 150px; /* Puedes ajustar el tamaño del campo de búsqueda */
+    padding: 5px;
+}
+
+#addToAccountSection button {
+    padding: 5px 10px;
+}
+
+.payment-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px; /* Espacio entre los botones */
+}
+
+.payment-buttons form {
+    margin: 0; /* Eliminar márgenes para que los botones queden alineados */
+}
+
+.btn {
+    padding: 10px 20px; /* Ajusta el tamaño de los botones */
+    font-size: 16px; /* Ajusta el tamaño de la fuente */
+}
+
+/* Estilo general para la sección de búsqueda */
+#searchSection {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Contenedor del formulario de búsqueda */
+.search-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Formulario de búsqueda */
+.search-form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Etiqueta del formulario */
+.search-label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Campo de entrada de texto */
+#search {
+    flex: 1;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Botón de búsqueda */
+.btn-search {
+    padding: 10px 20px;
+    font-size: 14px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-search:hover {
+    background-color: #0056b3;
+}
+
+/* Resultado de la búsqueda */
+.search-result {
+    padding: 10px;
+    background-color: #e7f4ff;
+    border: 1px solid #a3d0ff;
+    border-radius: 5px;
+}
+
+.result-text {
+    font-size: 16px;
+    font-weight: bold;
+    color: #0076f4;
+    text-align: center;
+}
+
+/* Contenedor para centrar el botón */
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+

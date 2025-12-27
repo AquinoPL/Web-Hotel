@@ -1,0 +1,56 @@
+#selectedRooms {
+    padding: 2rem;
+    background-color: var(--light-bg);
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+#selectedRooms h3 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    position: relative;
+}
+
+#selectedRooms h3::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: var(--accent-color);
+}
+
+#selectedRooms table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    overflow: hidden;
+}
+
+#selectedRooms th, #selectedRooms td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--light-bg);
+}
+
+#selectedRooms th {
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-weight: bold;
+}
+
+#selectedRooms tr:last-child td {
+    border-bottom: none;
+}
+
+#selectedRooms tr:hover {
+    background-color: var(--light-bg);
+    transition: var(--transition);
+}
+
